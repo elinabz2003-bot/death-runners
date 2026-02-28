@@ -1,0 +1,222 @@
+/* =======================================================
+   Police et couleurs de base
+   ======================================================= */
+   body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d; /* fond sombre */
+    color: #e6e6e6;           /* texte clair */
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* =======================================================
+   Header
+   ======================================================= */
+header {
+    background: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+}
+.logo h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #00ffcc;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin: 10px 10px 0 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #e6e6e6;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #00ffcc;
+}
+
+/* =======================================================
+   Contenu principal
+   ======================================================= */
+main {
+    padding: 40px;
+}
+
+/* =======================================================
+   Footer
+   ======================================================= */
+footer {
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    padding: 20px 40px;
+    border-top: 2px solid #00ffcc;
+    color: #e6e6e6;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* =======================================================
+   Liens
+   ======================================================= */
+a {
+    color: #00ffcc;
+}
+
+/* =======================================================
+   Boutons et formulaires
+   ======================================================= */
+button, input[type="submit"] {
+    background-color: #00ffcc;
+    color: #0d0d0d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s;
+    border-radius: 3px;
+}
+button:hover, input[type="submit"]:hover {
+    background-color: #00e6b8;
+}
+
+form {
+    /* margin: 10px 5px; */
+}
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background-color: #0d0d0d;
+    color: #e6e6e6;
+}
+
+/* =======================================================
+   Tableaux Admin
+   ======================================================= */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #1a1a1a;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+.admin-table th,
+.admin-table td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: left;
+}
+.admin-table th {
+    background-color: #00ffcc;
+    color: #0d0d0d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.admin-table tr:nth-child(even) {
+    background-color: #141414;
+}
+.admin-table tr:hover {
+    background-color: rgba(0, 255, 204, 0.1);
+}
+.admin-table tr:hover td {
+    color: #00ffcc;
+}
+
+/* =======================================================
+   Sections Admin
+   ======================================================= */
+.admin-dashboard h2 {
+    color: #00ffcc;
+    border-bottom: 2px solid #00ffcc;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.admin-stats {
+    display: flex;
+    gap: 20px;
+}
+.admin-stats .stat-box {
+    flex: 1;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+}
+.admin-stats .stat-box h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #00ffcc;
+}
+.admin-stats .stat-box p {
+    font-size: 2em;
+    margin: 10px 0 0;
+    color: #e6e6e6;
+}
+
+/* =======================================================
+   MEDIA QUERIES POUR RESPONSIVE DESIGN
+   ======================================================= */
+
+/* Pour tablettes et écrans moyens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    main {
+        padding: 20px;
+    }
+    form {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .admin-stats {
+        flex-direction: column;
+    }
+}
+
+/* Pour mobiles */
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+    .logo h1 {
+        font-size: 1.5em;
+    }
+    nav ul li a {
+        font-size: 0.9em;
+    }
+    main {
+        padding: 10px;
+    }
+    form {
+        padding: 10px;
+    }
+    table.admin-table, .admin-table th, .admin-table td {
+        font-size: 0.8em;
+    }
+}
