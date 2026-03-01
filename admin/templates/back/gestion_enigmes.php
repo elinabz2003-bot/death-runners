@@ -1,16 +1,4 @@
 <?php
-/**
- * Fichier de gestion des énigmes dans le panneau d'administration.
- *
- * Permet d'afficher, ajouter, modifier et supprimer des énigmes.
- *
- * Dépendances :
- * - class/Enigme.php
- * - admin/model/AdminDB.php
- * - admin/model/EnigmeManager.php
- */
-
-
 
 $racine_path = dirname(__DIR__, 3) . '/';
 $titre = 'Gestion des énigmes';

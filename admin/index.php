@@ -1,10 +1,6 @@
 <?php
 /**
  * Routeur principal du BackOffice (Administration).
- *
- * Compatible :
- * - Local en sous-dossier : /monsite_exemple/admin/...
- * - Production à la racine : /admin/...
  */
 
 ini_set('session.cookie_path', '/');
